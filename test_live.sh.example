@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Test runner script for live Monoova API integration tests
+
+# Set environment variables
+export MONOOVA_BASE_URL="YOUR_MONOOVA_BASE_URL"
+export MONOOVA_API_KEY="YOUR_MONOOVA_API_KEY"
+export MONOOVA_ACCOUNT_NUMBER="YOUR_MONOOVA_ACCOUNT_NUMBER"
+export MONOOVA_BSB="YOUR_MONOOVA_BSB"
+
+echo "🚀 Monoova Live API Testing..."
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo ""
+
+# Run all live tests
+cargo test --test live_api_test -- --nocapture --ignored
+
+echo ""
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo "✅ Test Complete!"
+
